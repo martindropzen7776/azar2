@@ -24,77 +24,127 @@ src="https://www.facebook.com/tr?id=703889295026779&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-   body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(90deg, #333333, #211f20);
-    color: #fff;
-    text-align: center;
-}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(145deg, #1b1b1b, #212121, #2a2a2a);
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
 
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(33, 31, 32, 1);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(50, 50, 50, 1);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente todos los elementos hijos */
 }
 
-header img {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
 
-.promo {
+        .logo {
+            width: 220px;
+            height: 220px;
+            margin-bottom: 40px;
+            background: linear-gradient(145deg, #ffbc00, #ff8c00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+            box-shadow: 0 5px 25px rgba(255,188,0,0.6);
+            animation: glow 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .cta-btn {
+            background-color: #ff4701;
+            color: white;
+            padding: 25px 50px;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            font-family: 'Montserrat', sans-serif;
+
+            /* Animación pulse */
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(4, 131, 60, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 20px rgba(4, 131, 60, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(4, 131, 60, 0);
+            }
+        }
+
+
+        .cta-btn:hover {
+            background-color: #ff4701;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .whatsapp-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer {
+            margin-top: 10px;
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .footer p {
+                color: var(--primary-color); /* Amarillo vibrante si la variable es #ffbc00 */
+    font-size: 25px;              /* Tamaño grande, como en el banner */
+    display: block;
     margin: 20px 0;
-}
-
-.promo img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(50, 50, 50, 1);
-}
-
-.cta {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-form button {
-    padding: 15px 30px;
-    background: linear-gradient(90deg, #fe4705, #d63118);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(252, 252, 252, 1);
-}
-
-form button:hover {
-    background: linear-gradient(90deg, #fe4705, #fcfcfc);
-    box-shadow: 0 6px 10px rgba(252, 252, 252, 1);
-}
-
-footer {
-    margin-top: 30px;
-    font-size: 14px;
-    color: #ccc;
-}
-
-footer a {
-    color: #00b140;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
+    text-shadow: 0 2px 15px rgba(255,188,0,0.6); /* Brillo sutil */
+    letter-spacing: 1px;
+    transform: rotate(-2deg);     /* Inclinación que da dinamismo */
+    position: relative;
+    z-index: 1;
+        }
     </style>
 </head>
 <body>
